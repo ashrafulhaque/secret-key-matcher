@@ -1,0 +1,113 @@
+/*Global style-CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+.container {
+    max-width: 700px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(12, 12, 12);
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+/* Styles for generate key section */
+.genkey-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.genkey-display {
+    font-size: 24px;
+    margin: 10px 0;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+/* Styles for pin input section */
+.pin-section {
+    width: 50%;
+}
+.pin-input {
+    display: inline-flex;
+    gap: 10px;
+    width: 100%;
+}
+.pin-label {
+    color: whitesmoke;
+    margin: 10px 0;
+    padding: 15px 0;
+    width: 30%;
+}
+.pin-display{
+    font-size: 24px;
+    margin: 15px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    width: 70%;
+    text-align: center;
+    box-sizing: border-box;
+    height: 50px; 
+}
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Styles for buttons */
+.btn {
+    font-size: 18px;
+    padding: 15px 18px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.3s;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.num {
+    background-color: darkgoldenrod;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn-genkey {
+    width: 200px;
+    background-color: darkorange;
+    font-size: 15px;
+}
+.backspace-btn {
+    background-color: lightcoral;
+}
+.submit-btn {
+    background-color: #30D46F;
+}
+.clear-btn {
+    background-color: crimson;
+}

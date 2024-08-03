@@ -15,7 +15,7 @@ html, body {
     max-width: 1000px;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 3px;
     align-items: center;
     justify-content: center;
     margin: 50px auto;
@@ -44,8 +44,9 @@ html, body {
     width: 250px;
     text-align: center;
     box-sizing: border-box;
-    height: 50px;
+    height: 55px;
     border: 1px solid whitesmoke;
+    color: white;
 }
 
 /* Styles for pin input section */
@@ -79,17 +80,17 @@ html, body {
 }
 .pin-display {
     font-size: 24px;
+    color: white;
     background-color: #003566;
     padding: 15px;
     border-radius: 3px;
     width: 70%;
-    height: 50px;
-    margin-left: 5px; 
+    height: 55px;
     text-align: center;
     box-sizing: border-box;
     border: 1px solid whitesmoke;
 }
-.keypad {
+.keyboard {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
@@ -118,11 +119,11 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-.num {
-    background-color: #1b4965;
-}
 .btn:hover {
     opacity: 0.8;
+}
+.num {
+    background-color: #1b4965;
 }
 .btn-genkey {
     width: 250px;
@@ -164,7 +165,7 @@ html, body {
         padding: 5px 0;
         margin: 10px 0 0 5px; 
     }
-    .keypad {
+    .keyboard {
         grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
     }
@@ -198,7 +199,7 @@ html, body {
         padding: 5px 0;
         margin: 0 0 10px 5px; 
     }
-    .keypad {
+    .keyboard {
         grid-template-columns: repeat(2, 1fr);
     }
     .btn {

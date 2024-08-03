@@ -2,72 +2,99 @@
 * {
     margin: 0;
     padding: 0;
-	border: 0;
-	font-size: 100%;
+    border: 0;
+    font-size: 100%;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
-    max-width: 700px;
-    height: 80vh;
+    max-width: 1000px;
     display: flex;
+    flex-direction: row;
+    gap: 5px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(12, 12, 12);
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto;
+    height: calc(100% - 100px); /* Adjust height to fill the screen */
 }
-
 
 /* Styles for generate key section */
 .genkey-section {
     width: 50%;
+    height: 100%;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #032b43;
+    box-sizing: border-box;
 }
 
 .genkey-display {
     font-size: 24px;
     margin: 10px 0;
-    background-color: #333;
+    background-color: #003566;
     padding: 15px;
-    border-radius: 5px;
-    width: 200px;
+    border-radius: 3px;
+    width: 250px;
     text-align: center;
     box-sizing: border-box;
     height: 50px;
+    border: 1px solid whitesmoke;
 }
 
 /* Styles for pin input section */
 .pin-section {
     width: 50%;
+    height: 100%;
+    padding: 50px;
+    background-color: #032b43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
+
 .pin-input {
-    display: inline-flex;
-    gap: 10px;
+    display: flex;
+    margin: 10px 0;
     width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
 }
 .pin-label {
     color: whitesmoke;
-    margin: 10px 0;
-    padding: 15px 0;
     width: 30%;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-size: 25px;
 }
-.pin-display{
+.pin-display {
     font-size: 24px;
-    margin: 15px;
-    background-color: #333;
+    background-color: #003566;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 70%;
+    height: 50px;
+    margin-left: 5px; 
     text-align: center;
     box-sizing: border-box;
-    height: 50px; 
+    border: 1px solid whitesmoke;
 }
-.keypad{
+.keypad {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 0;
 }
 .message {
     margin-top: 10px;
@@ -85,29 +112,100 @@
     cursor: pointer;
     color: white;
     transition: opacity 0.3s;
-    width: 70px;
+    width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .num {
-    background-color: darkgoldenrod;
+    background-color: #1b4965;
 }
 .btn:hover {
     opacity: 0.8;
 }
 .btn-genkey {
-    width: 200px;
-    background-color: darkorange;
-    font-size: 15px;
+    width: 250px;
+    background-color: #849706;
+    font-size: 20px;
 }
 .backspace-btn {
-    background-color: lightcoral;
+    background-color: #e7bc13;
 }
 .submit-btn {
-    background-color: #30D46F;
+    background-color: #0a9396;
 }
 .clear-btn {
-    background-color: crimson;
+    background-color: #c71f37;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
+    .genkey-section {
+        width: 95%;
+        height: auto;
+    }
+    .pin-section {
+        width: 95%;
+        height: auto;
+    }
+    .pin-input {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pin-label,
+    .pin-display {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        margin: 10px 0 0 5px; 
+    }
+    .keypad {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+    .btn-genkey {
+        width: 250px;
+    }
+}
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
+    .genkey-section {
+        width: 95%;
+        height: auto;
+    }
+    .pin-section {
+        width: 95%;
+        height: auto;
+    }
+    .pin-input {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pin-label,
+    .pin-display {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0 0 10px 5px; 
+    }
+    .keypad {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .btn {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+    .btn-genkey {
+        width: 250px;
+    }
 }
